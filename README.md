@@ -4,133 +4,100 @@
 
 In this project you will learn the basics of OOP using mobile devices as a reference. In the _"Project files"_ section you will find a description of the content to be displayed in each file.
 
-## Table of contents
+# OOP Basics
 
-- [Table of contents](#table-of-contents)
-- [Getting Started](#getting-started)
-- [Dependencies](#dependencies)
-- [Tools](#tools)
-- [OOP Introduction](#oop-introduction)
-- [Project files](#project-files)
+In the paradigm of object-oriented programming, there are many mechanisms that allow us to carry out the design of our software to be solid and scalable. Classes, Properties, Herency, Interface Polymorphism, Constructor and Destructors. Let’s take a look at all of this.
 
-## Getting Started
+## Main objectives in this project
 
-### The repo <!-- omit in toc -->
+- Improve your knowledge in object-oriented programming.
+- Understand Herency
+- Understand how to use Abstraction
+- Understand what is Polymorphism
+- Understand what interfaces are and what they are used for.
 
-First, you will need to clone the repo:
+## Basic concepts
 
-```bash
-$ git clone https://github.com/assembler-school/oop-basics.git
-```
+### **What is object-oriented programming in general terms?**
 
-### Presentation material <!-- omit in toc -->
+Object Oriented programming (OOP) is a programming paradigm that relies on the concept of classes and objects. It is used to structure a software program into simple, reusable pieces of code blueprints (usually called classes), which are used to create individual instances of objects.
 
-- [Slides](https://docs.google.com/presentation/d/1cZxutGPDqUGsLWLVen_ATjd7dEkeoPS_v_fy1y0C5Co/edit?usp=sharing)
+### **What is a class?**
 
-## Dependencies
+Classes are user-defined data types that act as the blueprint for individual objects, attributes and methods.
 
-Before we can get started you will need to make sure that all the necessary dependencies are installed in your system.
+### **What is an object?**
 
-### PHP <!-- omit in toc -->
+Objects are instances of a class created with specifically defined data. Objects can correspond to real-world objects or an abstract entity.
 
-You can install it by following the instructions [in the official docs](https://www.php.net/downloads) (we recommend that you install the version that is named _Current_).
+### **What is an instance?**
 
-To verify that you have installed it correctly, you can run the following command from the terminal that should output the version installed:
+An instance is the creation of an object based on its blueprint which is the class.
 
-```bash
-$ php -version
-```
+### **What is a property?**
 
-## Tools
+Properties or attributes are the values defined inside a class that represent the state of an object.
 
-In the event that you prefer to use a tool that installs everything you need to configure and run a PHP server, we recommend using [XAMPP](https://www.apachefriends.org/es/download.html)
+### **What is a method?**
 
-### XAMPP <!-- omit in toc -->
+Methods are the functions defined inside a class that describe the behaviors of an object.
 
-XAMPP is a completely free and easy to install Apache distribution that contains MariaDB, PHP, and Perl. The XAMPP installation package has been designed to be incredibly easy to install and use.
+### **What is the difference between a function and a method?**
 
-<img src='./assets/img/xampp-homepage.png' width='600' alt='xampp homepage'>
+A method is a function that is associated with an object.
 
-You have to go to the [download page](https://www.apachefriends.org/es/download.html) and it will automatically recommend installing the latest version available.
+- Methods are implicitly passed the object on which it was called without specifying them in the parameters, so that all properties and methods are accessible from inside.
 
-<img src='./assets/img/xampp-download.png' width='600' alt='xampp download'>
+- Normal functions would need to be specified that an object will be passed by parameter, in order to operate with public properties and methods, which are to that can be accessed outside the class.
 
-Once downloaded and installed, in the case that the Windows operating system you will see the following screen, in which you will only have to start the Apache service.
+### **What is a constructor?**
 
-<img src='./assets/img/xampp-app.png' width='600' alt='xampp app'>
+A constructor is a method that is executed when an object is instantiated (created).
 
-## OOP Introduction
+### **What do we understand about the concept of encapsulation?**
 
-Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
+Encapsulation is the principle by which properties and methods of a class can only be accessed within its scope, through its own methods. Encapsulation hides part of its implementation for itself.
 
-## Project files
+There are 3 levels of encapsulation for properties and methods:
 
-### [01 - Classes](./01-classes.php) <!-- omit in toc -->
+- Public, that allows the access from outside the class where have been declared.
+- Private, which only allows the access from inside the class where have been declared.
+- Protected, which allows the access from inside the class and from child classes.
 
-The OOP paradigm encapsulates concepts of the real world in what is called as Classes which create Objects. In this file you will learn how to create a class and instanciate it.
+### **What do we understand about the concept of abstraction?**
 
-### [02 - Properties](02-properties.php) <!-- omit in toc -->
+Abstraction is the principle by which only the required or essential characteristics of an object are implemented. Abstraction hides or ignores details that are not essential for the functionality of the object.
 
-Class member variables are called properties. In this file, you will learn how to add properties to a class and get them when the class is instantiated.
+### **What do we understand about the concept of inheritance?**
 
-### [03 - Methods](03-methods.php) <!-- omit in toc -->
+Inheritance is the ability to create new classes that extends from existing ones, and inherits its public and protected properties and methods. These properties and methods are accessible from the parent class unless those were overriden in the child class.
 
-Properties define the characteristics of an object and the methods (functions in a class are called methods) which define the behavior of the Class. In this file you will learn how to create methods inside a class.
+### **What do we understand about the concept of polymorphism?**
 
-### [04 - Getters](04-getters.php) <!-- omit in toc -->
+Polymorphism is the ability of using multiple classes that are interchangeable, which implements same properties or methods. This ability is achieved with the use of interfaces in multiple classes, or the use of inheritance from an exsiting class to multple classes.
 
-The get method returns the attribute value, usually there is a get method for each attribute of the class. In this file you will learn how to create **getter** methods.
+### **What do we understand about the concept of Overload?**
 
-### [05 - Setters](05-setters.php) <!-- omit in toc -->
+Overload consists on declare the same function name multiple times, but using a different set of parameters.
 
-The set method sets the attribute value, usually there is a get method for each attribute of the class. In this file you will learn how to create **setter** methods.
+### **What do we understand about the concept of Override?**
 
-### [06 - Constructors](06-constructors.php) <!-- omit in toc -->
+Override consists on redeclare a method in a child class that was inherited from the parent class.
 
-A constructor allows you to initialize an object's properties upon creation of the object. In this file you will learn how to create the constructor method.
+### **What is a static class?**
 
-### [07 - Inheritance problem](07-inheritance-problem.php) <!-- omit in toc -->
+A static class is similar to a class that is both abstract and sealed. The difference between a static class and a non-static class is that a static class cannot be instantiated or inherited and that all of the members of the class are static in nature. To declare a class as static, you should mark it with the static keyword in the class declaration.
 
-There are several disadvantages of not applying inheritance in our code. In this file you will lean what's the problem if you don't apply any inheritance in your code.
+### **Look for advantages over object-oriented programming compared to other programming paradigms**
 
-### [08 - Inheritance soluction](08-inheritance-solution.php) <!-- omit in toc -->
+- Modularity: Encapsulation enables objects to be self-contained, making troubleshooting and collaborative development easier.
+- Reusability: Code can be reused through inheritance, meaning a team does not have to write the same code multiple times.
+- Productivity: Programmers can construct new programs quicker through the use of multiple libraries and reusable code.
+- Easily upgradable and scalable: Programmers can implement system functionalities independently.
+- Security: Using encapsulation and abstraction, complex code is hidden, software maintenance is easier and internet protocols are protected.
+- Flexibility: Polymorphism enables a single function to adapt to the class it is placed in. Different objects can also pass through the same interface.
 
-The child class will inherit all the public and protected properties and methods from the parent class. In addition, it can have its own properties and methods. In this file you will learn how to apply the inheritance in your code.
+### **Look for disadvantages of this paradigm.**
 
-### [09 - Public, private & protected](09-public-private-protected.php) <!-- omit in toc -->
-
-Properties and methods can have access modifiers which control where they can be accessed. In this file you will learn le three access modifiers.
-
-### [10 - Static](10-static.php) <!-- omit in toc -->
-
-Static properties and methods can be called directly - without creating an instance of the class first. In this file you will learn how to use static properties and methods.
-
-### [11 - Const](11-const.php) <!-- omit in toc -->
-
-Constants cannot be changed once it is declared. Class constants can be useful if you need to define some constant data within a class. In this file you will learn how to create constants within a class.
-
-### [12 - Abstract classes](12-abstract-classes.php) <!-- omit in toc -->
-
-Abstract classes and methods are when the parent class has a named method, but need its child class(es) to fill out the tasks. In this file you will learn how to create and use abstract classes.
-
-### [13 - Interfaces](13-interfaces.php) <!-- omit in toc -->
-
-Interfaces allow you to specify what methods a class should implement.
-Interfaces make it easy to use a variety of different classes in the same way. When one or more classes use the same interface, it is referred to as "polymorphism". In this file you will learn how to create and extend interfaces.
-
-### [14 - Overriding](14-overriding.php) <!-- omit in toc -->
-
-In function overriding, both parent and child classes should have same function name with and number of arguments. In this file you will learn how to implement overriding.
-
-### [15 - Overloading](15-overloading.php) <!-- omit in toc -->
-
-Function overloading contains same function name and that function preforms different task according to number of arguments. In this file you will learn how to implement overloading.
-
-### [16 - Namespaces](16-namespaces.php) <!-- omit in toc -->
-
-Namespaces are qualifiers that solve two different problems:
-
-1. They allow for better organization by grouping classes that work together to perform a task
-2. They allow the same name to be used for more than one class
-
-In this file you will learn how to create and use namespaces.
+- Can be inefficient: Object-oriented programming tends to use more CPU than alternative options.
+- Not begginer-firendly: Object-oriented programming does require a steep learning curve, but it can also be an investment into future projects.
